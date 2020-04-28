@@ -1,7 +1,7 @@
 import { FETCHING_POKEMON_START,FETCHING_POKEMON_SUCCESS,FETCHING_POKEMON_FAILURE } from '../actions'
 
 const initialState = {
-    pokemon: '',
+    pokemon: [],
     isFetching: false,
     error: ''
 }
