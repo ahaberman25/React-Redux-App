@@ -34,23 +34,32 @@ const Pokemon = ({ isFetching, getPokemon, error, pokemon }) => {
       {isFetching ? (
         <h2> Fetching Data: Please Wait... </h2>
       ) : (
-        <div className="pokemon-container">
-          {sprite.map((item) => (
-            <div className="sprite-container" key={item.data.name}>
-              <h2>{item.data.name}</h2>
-              <img src={item.data.sprites.front_default} alt={item.data.name} />
-            </div>
-          ))}
-          {prev ? (
-            <button className="prev" onClick={() => getPokemon(prev)}>
-              Prev
-            </button>
-          ) : null}
-          {next ? (
-            <button className="next" onClick={() => getPokemon(next)}>
-              Next
-            </button>
-          ) : null}
+        <div>
+          <div className="pokemon-container">
+            {sprite.map((item) => (
+              <div className="inner-container" key={item.data.name}>
+                <h2>{item.data.name}</h2>
+                <img
+                  src={item.data.sprites.front_default}
+                  alt={item.data.name}
+                />
+                <br />
+                <span>Pokedex # {item.data.order}</span>
+              </div>
+            ))}
+          </div>
+          <div className="buttons">
+            {prev ? (
+              <button className="prev" onClick={() => getPokemon(prev)}>
+                Prev
+              </button>
+            ) : null}
+            {next ? (
+              <button className="next" onClick={() => getPokemon(next)}>
+                Next
+              </button>
+            ) : null}
+          </div>
         </div>
       )}
     </div>
