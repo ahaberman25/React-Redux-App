@@ -1,0 +1,29 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.pokemon-container {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.pokemon-container .inner-container {
+  width: 25%;
+}
+
+.buttons {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.next {
+  width: 40%;
+  margin: 20px;
+}
+
+.prev {
+  width: 40%;
+  margin: 20px;
+}
